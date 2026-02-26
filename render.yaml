@@ -1,0 +1,43 @@
+# render.yaml — Deploy to Render.com
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: knowledge-hub
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: "npm ci --legacy-peer-deps && npm run build && cd server && npm ci --omit=dev"
+    startCommand: "node server/index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URL
+        sync: false
+      - key: CLOUD_NAME
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: API_SECRET
+        sync: false
+      - key: FOLDER_NAME
+        value: KnowledgeHub
+      - key: RAZORPAY_KEY
+        sync: false
+      - key: RAZORPAY_SECRET
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MAIL_HOST
+        sync: false
+      - key: MAIL_USER
+        sync: false
+      - key: MAIL_PASS
+        sync: false
+      - key: CLIENT_URL
+        fromService:
+          type: web
+          name: knowledge-hub
+          property: host

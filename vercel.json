@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "CI=false npm run build",
+  "outputDirectory": "build",
+  "rewrites": [
+    {
+      "source": "/api/v1/:path*",
+      "destination": "https://your-backend.onrender.com/api/v1/:path*"
+    }
+  ]
+}
