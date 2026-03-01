@@ -7,6 +7,13 @@ export const sidebarLinks = [
     icon: "VscAccount",
   },
   {
+    id: 7,
+    name: "Admin Dashboard",
+    path: "/dashboard/admin",
+    type: "Admin",
+    icon: "VscSettingsGear",
+  },
+  {
     id: 2,
     name: "Dashboard",
     path: "/dashboard/instructor",
