@@ -60,7 +60,7 @@ const userSchema = new mongoose.Schema(
 		},
 		image: {
 			type: String,
-			required: true,
+			default: `https://api.dicebear.com/5.x/initials/svg?seed=User`,
 		},
 		courseProgress: [
 			{
