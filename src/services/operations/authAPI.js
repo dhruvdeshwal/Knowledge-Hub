@@ -31,8 +31,17 @@ export function sendOtp(email, navigate) {
         throw new Error(response.data.message)
       }
 
-      toast.success("OTP Sent Successfully")
-      navigate("/verify-email")
+      toast.success("OTP Sent! Check your email.")
+// Demo hint: show OTP in console for testing
+if (response.data.otp) {
+  console.log(`%c🔑 DEMO OTP: ${response.data.otp}`, "color: lime; font-size: 20px; font-weight: bold;")
+  toast(`📬 Can't receive email? Your OTP is: ${response.data.otp}`, {
+    duration: 15000,
+    icon: "🔑",
+    style: { background: "#1e1e1e", color: "#fff", fontSize: "14px" }
+  })
+}
+navigate("/verify-email")
     } catch (error) {
       console.log("SENDOTP API ERROR............", error)
       toast.error("Could Not Send OTP")
