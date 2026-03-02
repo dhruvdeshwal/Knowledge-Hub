@@ -40,7 +40,7 @@ const LearningGridArray = [
     order: 5,
     heading: "Ready to Work",
     description:
-      "Studynotion partners with more than 275+ leading universities and companies to bring",
+      "KnowledgeHub partners with more than 275+ leading universities and companies to bring",
   },
 ];
 

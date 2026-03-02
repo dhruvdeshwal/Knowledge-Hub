@@ -74,8 +74,13 @@ exports.contactUsEmail = (
     
     <body>
         <div class="container">
-                <a href="https://knowledgehub-edtech-project.vercel.app"><img class="logo"
-                    src="https://i.ibb.co/7Xyj3PC/logo.png" alt="KnowledgeHub Logo"></a>
+                <a href="https://knowledge-hubb.vercel.app/">
+  <img 
+    src="https://dummyimage.com/200x60/000/ffffff&text=KnowledgeHub"
+    alt="KnowledgeHub"
+    style="height:50px;"
+  >
+</a>
             <div class="message">Contact Form Confirmation</div>
             <div class="body">
                 <p>Dear ${firstname} ${lastname},</p>
@@ -89,7 +94,7 @@ exports.contactUsEmail = (
                 <p>We appreciate your interest and will get back to you shortly. </p>
             </div>
             <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-                out to us at <a href="mailto:info@knowledgehub.com">info@knowledgehub.com</a>. We are here to help!</div>
+                out to us at <a href="mailto:dhruvdeshwal11@gmail.com">dhruvdeshwal11@gmail.com</a>. We are here to help!</div>
         </div>
     </body>
     
